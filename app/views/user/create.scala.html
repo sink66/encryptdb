@@ -1,0 +1,10 @@
+@(form: Form[models.form.NewUserForm])
+
+@main("登録ページ") {
+    @helper.form(action = routes.HomeController.doCreate()) {
+        @helper.inputText(form("name"))
+        @helper.inputPassword(form("password"))
+        @helper.inputText(form("mail"))
+        <input type="submit" value="登録">
+    }
+}
